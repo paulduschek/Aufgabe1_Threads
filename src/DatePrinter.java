@@ -9,7 +9,6 @@ public class DatePrinter implements Runnable{
     @Override
     public void run() {
         Date now = new Date();
-        now.getTime();
         for(int i = 0; i < 20; i++) {
             System.out.println(now);
         }

@@ -11,7 +11,13 @@ public class Main {
         CountPrinter cp = new CountPrinter();
         Thread th2 = new Thread(cp);
 
-        th1.start();
         th2.start();
+        th1.start();
     }
+    /*Erklärung:
+    Egal, welcher Thread zuerst erzeugt wird, der CountPrinter Thread wird immer vor dem DatePrinter Thread ausgegeben.
+    Das Ganze ändert sich auch nicht, wenn man die auszugebenen Daten erhöht.
+    Ab 2000 auszugebenen Daten schleicht sich während der Ausgabe des Counts hin und wieder eine Ausgabe vom Datum ein.
+    Die Ausgabe der Threads ist unvorhersehbar, weshalb die einzelnen Threads bei höheren Datensätzen immer mehr durcheinander geraten.
+     */
 }
