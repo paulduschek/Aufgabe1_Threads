@@ -9,8 +9,9 @@ public class DatePrinter implements Runnable{
     @Override
     public void run() {
         Date now = new Date();
-        for(int i = 0; i < 20; i++) {
+        for(int i = 1; i <= 5000; i++) {
             System.out.println(now);
+            System.out.printf("Date output %d%n", i);
         }
     }
 }
